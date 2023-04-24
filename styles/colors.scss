@@ -1,0 +1,22 @@
+:root {
+  // Colors
+
+  // Base Colors
+  --eucaplyptus-color: #44FFA1;
+  --dark-purple-color: #24053E;
+  --davy-grey-color: #584D62;
+  --white-color: #FFFFFF;
+  --ghost-white-color: #FCF8FF;
+
+  // Primary Color
+  --primary-color: var(--eucaplyptus-color);
+
+  // Secondary Color
+  --secondary-color: var(--dark-purple-color);
+
+  // Tertiary Color
+  --tertiary-color: var(--davy-grey-color);
+
+  // Background Color
+  --background-color: var(--white-color);
+}
