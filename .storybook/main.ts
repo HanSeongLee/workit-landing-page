@@ -1,11 +1,13 @@
-import type { StorybookConfig } from "@storybook/nextjs";
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import type { StorybookConfig } from '@storybook/nextjs';
+
 const config: StorybookConfig = {
   stories: [
     '../components/**/*.mdx',
     '../components/commons/**/*.mdx',
     '../components/**/*.stories.@(js|jsx|ts|tsx)',
-    '../components/commons/**/*.stories.@(js|jsx|ts|tsx)'
+    '../components/commons/**/*.stories.@(js|jsx|ts|tsx)',
+    '../pages/**/*.mdx',
+    '../pages/**/*.stories.@(js|jsx|ts|tsx)'
   ],
   addons: [
     "@storybook/addon-links",
@@ -19,6 +21,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ['../public'],
   webpackFinal: async config => {
     const imageRule = config.module?.rules?.find(rule => {
       const test = (rule as { test: RegExp }).test
