@@ -22,4 +22,8 @@ const Logo: React.FC<IProps> = ({ dark, ...props }) => {
     );
 };
 
+Logo.defaultProps = {
+    dark: false,
+};
+
 export default Logo;
