@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { Fraunces, Manrope } from '@next/font/google';
 
 const manrope = Manrope({
-  weight: ['400'],
+  weight: ['400', '700'],
   subsets: ['latin'],
 });
 
