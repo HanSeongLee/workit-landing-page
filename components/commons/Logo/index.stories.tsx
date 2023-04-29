@@ -17,13 +17,13 @@ export default meta;
 
 type Story = StoryObj<typeof Logo>;
 export const Light: Story = {
-    render: () => (
-        <Logo />
-    ),
+    args: {
+        dark: false,
+    },
 };
 
 export const Dark: Story = {
-    render: () => (
-        <Logo dark />
-    ),
+    args: {
+        dark: true,
+    },
 };
