@@ -1,0 +1,19 @@
+
+.footer {
+  padding: 74px 0 63.78px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 58px;
+  }
+
+  .socialContainer {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+}
