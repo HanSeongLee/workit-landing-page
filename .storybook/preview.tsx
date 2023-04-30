@@ -21,7 +21,7 @@ const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, 'default', {
   configurable: true,
-  value: (props) => (
+  value: (props: any) => (
       <OriginalNextImage {...props}
                          unoptimized
       />
