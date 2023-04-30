@@ -1,0 +1,17 @@
+
+.featureCard {
+  .title {
+    font-family: var(--fraunces-font);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--davy-grey-color);
+  }
+}
