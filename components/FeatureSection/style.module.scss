@@ -1,0 +1,51 @@
+
+.featureSection {
+  position: relative;
+  top: -15px;
+  background: var(--white-color) url("/img/feature-background.svg") no-repeat bottom;
+  background-size: contain;
+  padding-top: 170.29px;
+  padding-bottom: 71.71px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: var(--ghost-white-color);
+    content: "";
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .featureContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    counter-reset: feature;
+
+    li::before {
+      width: 48px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--fraunces-font);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 36px;
+      counter-increment: feature;
+      content: counter(feature);
+      border: 1px solid var(--davy-grey-color);
+      border-radius: 50%;
+      margin-bottom: 24px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
