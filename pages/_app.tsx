@@ -1,15 +1,15 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
-import { Fraunces, Manrope } from '@next/font/google';
+import { Manrope } from '@next/font/google';
+import localFont from '@next/font/local';
 
 const manrope = Manrope({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
 
-const fraunces = Fraunces({
-    weight: ['600'],
-    subsets: ['latin'],
+const fraunces = localFont({
+    src: '../public/fonts/Fraunces_144pt-SemiBold.ttf'
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
