@@ -1,6 +1,11 @@
+@import "styles/utils";
 
 .footer {
   padding: 74px 0 63.78px;
+
+  @include media(">tablet") {
+    padding: 80px 0 121.78px;
+  }
 
   .container {
     display: flex;
