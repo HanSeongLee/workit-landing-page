@@ -1,6 +1,7 @@
 import React from 'react';
 import CTACard from './index';
 import { Meta, StoryObj } from '@storybook/react';
+import Container from 'components/commons/Container';
 
 const meta: Meta<typeof CTACard> = {
     title: 'Components/CTACard',
@@ -12,6 +13,13 @@ const meta: Meta<typeof CTACard> = {
         title: { control: 'text' },
         description: { control: 'text' },
     },
+    decorators: [
+        (Story) => (
+            <Container>
+                <Story />
+            </Container>
+        )
+    ],
 };
 
 export default meta;
