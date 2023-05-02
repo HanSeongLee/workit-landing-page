@@ -15,7 +15,8 @@ const HeroSection: React.FC<IProps> = ({ onLearnMoreClick, className, ...props }
         >
             <Container className={styles.container}>
                 <h2 className={styles.title}>
-                    Data <strong>tailored</strong> to your needs.
+                    Data <strong>tailored</strong> to {` 
+                    your needs.`}
                 </h2>
                 <Button onClick={onLearnMoreClick}>
                     Learn more
