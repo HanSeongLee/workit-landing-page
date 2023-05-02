@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .featureSection {
   position: relative;
@@ -6,6 +7,12 @@
   background-size: contain;
   padding-top: 170.29px;
   padding-bottom: 71.71px;
+
+  @include media(">tablet") {
+    top: -50px;
+    padding-top: 253.76px;
+    padding-bottom: 103.76px;
+  }
 
   &::before {
     position: absolute;
@@ -20,6 +27,10 @@
   .container {
     position: relative;
     text-align: center;
+
+    @include media(">tablet") {
+      text-align: left;
+    }
   }
 
   .featureContainer {
@@ -29,23 +40,44 @@
     list-style: none;
     counter-reset: feature;
 
-    li::before {
-      width: 48px;
-      height: 46px;
-      display: flex;
+    @include media(">tablet") {
       align-items: center;
-      justify-content: center;
-      font-family: var(--fraunces-font);
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 36px;
-      counter-increment: feature;
-      content: counter(feature);
-      border: 1px solid var(--davy-grey-color);
-      border-radius: 50%;
-      margin-bottom: 24px;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    li {
+      @include media(">tablet") {
+        max-width: 573px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        & > * {
+          flex: 1;
+        }
+      }
+
+      &::before {
+        width: 48px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--fraunces-font);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 36px;
+        counter-increment: feature;
+        content: counter(feature);
+        border: 1px solid var(--davy-grey-color);
+        border-radius: 50%;
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include media(">tablet") {
+          margin: 0;
+        }
+      }
     }
   }
 }
