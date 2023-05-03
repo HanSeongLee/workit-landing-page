@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   font-weight: 700;
@@ -11,12 +12,24 @@
   &.primary {
     color: var(--secondary-color);
     background: var(--primary-color);
-    padding: 11px 23.5px 12px;
+    padding: 9px 21.5px 10px;
+    border: 2px solid #44FFA1;
+    transition: color 0.3s, background 0.3s;
+
+    @include media(">desktop") {
+      padding: 11px 30.5px 14px;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+      background: transparent;
+    }
   }
 
   &.link {
     position: relative;
     color: var(--white-color);
+    transition: color 0.3s;
 
     &::before {
       position: absolute;
@@ -26,6 +39,10 @@
       height: 3px;
       background: var(--primary-color);
       content: "";
+    }
+
+    &:hover {
+      color: var(--primary-color);
     }
   }
 }
