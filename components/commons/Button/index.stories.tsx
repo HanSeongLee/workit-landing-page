@@ -29,15 +29,16 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-    render: () => <Button variant={'primary'}>Primary</Button>,
+    args: {
+        variant: 'primary',
+        children: 'Primary',
+    },
 };
 
 export const Link: Story = {
-    render: () => (
-        <Button variant={'link'}
-                href={'https://google.com'}
-        >
-            Link
-        </Button>
-    ),
+    args: {
+        variant: 'link',
+        href: 'https://google.com',
+        children: 'Link',
+    },
 };
