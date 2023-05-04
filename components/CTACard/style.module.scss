@@ -4,26 +4,33 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 228px;
+  padding-top: 228px;
 
   @include media(">tablet") {
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 100px;
+    padding-top: 151px;
+  }
+
+  @include media(">desktop") {
+    padding-top: 173px;
   }
 
   .avatar {
     position: absolute;
-    top: -228px;
+    top: 0px;
     left: 50%;
     width: 281px;
     object-fit: cover;
     transform: translateX(-50%);
 
     @include media(">tablet") {
-      top: -151px;
       left: 0;
       transform: initial;
+    }
+
+    @include media(">desktop") {
+      width: 477px;
     }
   }
 
@@ -39,6 +46,11 @@
       padding: 48px 56px 56px;
     }
 
+    @include media(">desktop") {
+      max-width: 730px;
+      padding: 64px;
+    }
+
     .title {
       font-family: var(--fraunces-font);
       font-weight: 600;
@@ -52,12 +64,23 @@
         line-height: 56px;
         margin-bottom: 24px;
       }
+
+      @include media(">desktop") {
+        font-size: 56px;
+        line-height: 64px;
+        margin-bottom: 32px;
+      }
     }
 
     .description {
       font-size: 16px;
       line-height: 28px;
       color: var(--white-color);
+
+      @include media(">desktop") {
+        font-size: 18px;
+        line-height: 32px;
+      }
     }
   }
 
@@ -70,6 +93,10 @@
 
     @include media(">tablet") {
       align-items: flex-start;
+    }
+
+    @include media(">desktop") {
+      margin-top: 32px;
     }
   }
 }
