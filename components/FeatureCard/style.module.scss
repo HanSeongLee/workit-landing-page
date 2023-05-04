@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .featureCard {
   .title {
@@ -7,11 +8,22 @@
     line-height: 36px;
     color: var(--secondary-color);
     margin-bottom: 16px;
+
+    @include media(">desktop") {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 28px;
+    }
   }
 
   .description {
     font-size: 16px;
     line-height: 28px;
     color: var(--davy-grey-color);
+
+    @include media(">desktop") {
+      font-size: 18px;
+      line-height: 32px;
+    }
   }
 }
