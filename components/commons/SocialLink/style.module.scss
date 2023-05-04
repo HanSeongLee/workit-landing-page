@@ -1,0 +1,14 @@
+
+.socialLink {
+
+  &:hover {
+    svg path {
+      fill: var(--secondary-color);
+    }
+  }
+
+  svg path {
+    fill: var(--davy-grey-color);
+    transition: fill 0.3s;
+  }
+}
