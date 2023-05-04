@@ -2,16 +2,23 @@
 
 .featureSection {
   position: relative;
-  top: -15px;
+  top: -30px;
   background: var(--white-color) url("/img/feature-background.svg") no-repeat bottom;
   background-size: contain;
-  padding-top: 170.29px;
+  padding-top: 185.29px;
   padding-bottom: 71.71px;
 
   @include media(">tablet") {
-    top: -50px;
-    padding-top: 253.76px;
+    top: -80px;
+    padding-top: 283.76px;
     padding-bottom: 103.76px;
+    background-size: cover;
+  }
+
+  @include media(">desktop") {
+    top: -100px;
+    padding-top: 355px;
+    padding-bottom: 171px;
   }
 
   &::before {
@@ -31,6 +38,10 @@
     @include media(">tablet") {
       text-align: left;
     }
+
+    @include media(">desktop") {
+      text-align: center;
+    }
   }
 
   .featureContainer {
@@ -44,6 +55,12 @@
       align-items: center;
     }
 
+    @include media(">desktop") {
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 24px;
+    }
+
     li {
       @include media(">tablet") {
         max-width: 573px;
@@ -54,6 +71,12 @@
         & > * {
           flex: 1;
         }
+      }
+
+      @include media(">desktop") {
+        flex: 1;
+        flex-direction: column;
+        gap: 0;
       }
 
       &::before {
@@ -76,6 +99,14 @@
 
         @include media(">tablet") {
           margin: 0;
+        }
+
+        @include media(">desktop") {
+          width: 56px;
+          height: 56px;
+          font-size: 24px;
+          line-height: 40px;
+          margin-bottom: 56px;
         }
       }
     }

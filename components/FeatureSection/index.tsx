@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
+import cn from 'classnames';
 import Container from 'components/commons/Container';
 import FeatureContainer from 'containers/FeatureContainer';
 
-const FeatureSection: React.FC = () => {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
+
+}
+
+const FeatureSection: React.FC<IProps> = ({ className, ...props }) => {
     const featureItems: FeatureItemType[] = [
         {
             title: 'Actionable insights',
@@ -20,7 +25,9 @@ const FeatureSection: React.FC = () => {
     ];
 
     return (
-        <section className={styles.featureSection}>
+        <section className={cn(styles.featureSection, className)}
+                 {...props}
+        >
             <Container className={styles.container}>
                 <FeatureContainer className={styles.featureContainer}
                                   items={featureItems}
