@@ -9,4 +9,8 @@
   @include media(">tablet") {
     max-width: 689px;
   }
+
+  @include media(">desktop") {
+    max-width: 1114px;
+  }
 }
