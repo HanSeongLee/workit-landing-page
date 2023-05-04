@@ -10,6 +10,11 @@
 
   @include media(">tablet") {
     height: 540.24px;
+    background-size: cover;
+  }
+
+  @include media(">desktop") {
+    height: 730px;
   }
 
   &::before {
@@ -20,6 +25,10 @@
     height: 90%;
     background: var(--secondary-color);
     content: "";
+
+    @include media(">desktop") {
+      height: 80%;
+    }
   }
 
   .container {
@@ -31,6 +40,10 @@
 
     @include media(">tablet") {
       padding-top: 122px;
+    }
+
+    @include media(">desktop") {
+      padding-top: 146px;
     }
 
     .title {
@@ -48,6 +61,12 @@
         line-height: 60px;
         margin-bottom: 39px;
       }
+
+      @include media(">desktop") {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 37px;
+      }
     }
 
     strong {
@@ -63,6 +82,10 @@
         height: 3px;
         background: var(--primary-color);
         content: "";
+
+        @include media(">desktop") {
+          bottom: 6px;
+        }
       }
     }
 
@@ -75,6 +98,11 @@
       @include media(">tablet") {
         width: 514px;
         margin-top: 55px;
+      }
+
+      @include media(">desktop") {
+        width: 767px;
+        margin-top: 50px;
       }
     }
   }
