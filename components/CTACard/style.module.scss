@@ -14,6 +14,7 @@
 
   @include media(">desktop") {
     padding-top: 173px;
+    padding-bottom: 61.74px;
   }
 
   .avatar {
@@ -49,6 +50,26 @@
     @include media(">desktop") {
       max-width: 730px;
       padding: 64px;
+    }
+
+    &::before {
+      position: absolute;
+      right: 12.69px;
+      bottom: -105.74px;
+      width: 221px;
+      height: 212px;
+      display: none;
+      background: url("/img/bg-pattern-3.svg") no-repeat;
+      content: "";
+
+      @include media(">tablet") {
+        display: block;
+      }
+
+      @include media(">desktop") {
+        right: 72.69px;
+        bottom: -61.74px;
+      }
     }
 
     .title {

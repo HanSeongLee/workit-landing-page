@@ -46,6 +46,46 @@
       padding-top: 146px;
     }
 
+    &::before {
+      position: absolute;
+      top: 71.12px;
+      left: -266px;
+      width: 341px;
+      height: 317px;
+      display: none;
+      background: url("/img/bg-pattern-1.svg") no-repeat;
+      content: "";
+
+      @include media(">tablet") {
+        display: block;
+      }
+
+      @include media(">desktop") {
+        top: 116.12px;
+        left: -303.27px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 250px;
+      right: -134px;
+      width: 174px;
+      height: 181px;
+      display: none;
+      background: url("/img/bg-pattern-2.svg") no-repeat;
+      content: "";
+
+      @include media(">tablet") {
+        display: block;
+      }
+
+      @include media(">desktop") {
+        top: 314.07px;
+        right: -210.4px;
+      }
+    }
+
     .title {
       font-family: var(--fraunces-font);
       font-weight: 600;
