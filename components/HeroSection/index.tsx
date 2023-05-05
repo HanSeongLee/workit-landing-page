@@ -19,7 +19,7 @@ const HeroSection: React.FC<IProps> = ({ onLearnMoreClick, className, ...props }
                     your needs.`}
                 </h2>
                 <Button onClick={onLearnMoreClick}>
-                    Learn more
+                    Learn More
                 </Button>
 
                 <img className={styles.heroImage}
