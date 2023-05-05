@@ -30,9 +30,11 @@
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
     "@storybook/blocks": "^7.0.7",
+    "@storybook/manager-api": "^7.0.8",
     "@storybook/nextjs": "^7.0.7",
     "@storybook/react": "^7.0.7",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/theming": "^7.0.8",
     "@types/node": "17.0.18",
     "@types/react": "17.0.39",
     "chromatic": "^6.17.3",
@@ -41,5 +43,7 @@
     "sb": "^7.0.7",
     "storybook": "^7.0.7",
     "typescript": "4.5.5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "workit-landing-page@0.1.0"
 }
